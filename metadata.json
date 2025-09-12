@@ -1,0 +1,6 @@
+
+{
+  "name": "Prayer Timetable Extractor",
+  "description": "An application to upload an image of a prayer timetable, extract the schedule using AI, and export the data as JSON.",
+  "requestFramePermissions": []
+}

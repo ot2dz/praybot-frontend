@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prayer Timetable Extractor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': '#10B981',
+              'brand-secondary': '#059669',
+              'brand-light': '#D1FAE5',
+              'brand-dark': '#047857',
+              'neutral-light': '#F9FAFB',
+              'neutral-medium': '#6B7280',
+              'neutral-dark': '#1F2937',
+              'telegram': '#2AABEE',
+              'telegram-hover': '#179CDE',
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-neutral-light">
+    <div id="root"></div>
+    <script type="module" src="/src/index.tsx"></script>
+  </body>
+</html>
