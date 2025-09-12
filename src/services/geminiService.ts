@@ -48,7 +48,7 @@ const PRAYER_SCHEMA = {
 };
 
 export const extractPrayerTimes = async (imageFile: File): Promise<PrayerTime[]> => {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const ai = new GoogleGenAI({ apiKey: process.env.VITE_GEMINI_API_KEY });
 
   const imagePart = await fileToGenerativePart(imageFile);
 
