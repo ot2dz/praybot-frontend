@@ -75,13 +75,13 @@ const PrayerTable: React.FC<PrayerTableProps> = ({ initialData, onDataChange, im
       <div className="flex flex-col lg:flex-row gap-8">
         {imagePreview && (
           <div className="lg:w-1/3 flex-shrink-0">
-            <h3 className="text-xl font-semibold text-neutral-dark mb-4 text-center lg:text-left">Uploaded Image</h3>
+            <h3 className="text-xl font-semibold text-slate-800 mb-4 text-center lg:text-left">Uploaded Image</h3>
             <img src={imagePreview} alt="Prayer timetable" className="rounded-lg shadow-md w-full" />
           </div>
         )}
         <div className="flex-grow overflow-x-auto">
           <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4 mb-4">
-            <h2 className="text-2xl font-bold text-neutral-dark">Extracted Prayer Times</h2>
+            <h2 className="text-2xl font-bold text-slate-800">Extracted Prayer Times</h2>
             <div className="flex flex-col sm:flex-row gap-3">
                <button
                   onClick={handleSendToBot}
@@ -101,33 +101,33 @@ const PrayerTable: React.FC<PrayerTableProps> = ({ initialData, onDataChange, im
                 </button>
                 <button
                   onClick={handleDownload}
-                  className="flex items-center justify-center gap-2 bg-brand-primary hover:bg-brand-dark text-white font-semibold py-2 px-4 rounded-lg shadow-sm transition-all duration-200 ease-in-out transform hover:scale-105"
+                  className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg shadow-sm transition-all duration-200 ease-in-out transform hover:scale-105"
                 >
                   <DownloadIcon className="w-5 h-5" />
                   Export JSON
                 </button>
             </div>
           </div>
-          <p className="text-neutral-medium mb-4 text-sm sm:text-base">Review and edit the extracted data below. Changes are saved automatically.</p>
-          <div className="overflow-x-auto border border-neutral-light rounded-lg">
-            <table className="min-w-full divide-y divide-neutral-light">
-              <thead className="bg-neutral-light/50">
+          <p className="text-slate-500 mb-4 text-sm sm:text-base">Review and edit the extracted data below. Changes are saved automatically.</p>
+          <div className="overflow-x-auto border border-slate-50 rounded-lg">
+            <table className="min-w-full divide-y divide-slate-50">
+              <thead className="bg-slate-50/50">
                 <tr>
                   {columns.map((col) => (
-                     <th key={col} scope="col" className="py-3.5 px-4 text-left text-sm font-semibold text-neutral-dark whitespace-nowrap">{columnHeaders[col]}</th>
+                     <th key={col} scope="col" className="py-3.5 px-4 text-left text-sm font-semibold text-slate-800 whitespace-nowrap">{columnHeaders[col]}</th>
                   ))}
                 </tr>
               </thead>
-              <tbody className="divide-y divide-neutral-light bg-white">
+              <tbody className="divide-y divide-slate-50 bg-white">
                 {data.map((row, rowIndex) => (
-                  <tr key={rowIndex} className="hover:bg-neutral-light/30 transition-colors duration-150">
+                  <tr key={rowIndex} className="hover:bg-slate-50/30 transition-colors duration-150">
                     {columns.map((col) => (
                       <td key={col} className="p-0 whitespace-nowrap">
                         <input
                           type="text"
                           value={row[col]}
                           onChange={(e) => handleInputChange(rowIndex, col, e.target.value)}
-                          className="w-full px-3 py-2 text-sm text-neutral-dark bg-transparent border-none rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-primary"
+                          className="w-full px-3 py-2 text-sm text-slate-800 bg-transparent border-none rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-600"
                           aria-label={`${columnHeaders[col]} for row ${rowIndex + 1}`}
                         />
                       </td>

@@ -33,13 +33,13 @@ const Loader: React.FC<LoaderProps> = ({ imagePreview }) => {
       )}
       <div className="text-center md:text-left">
         <div className="flex items-center justify-center md:justify-start gap-3 mb-4">
-          <div className="w-8 h-8 border-4 border-brand-primary border-t-transparent rounded-full animate-spin"></div>
-          <h2 className="text-2xl font-bold text-neutral-dark">Processing...</h2>
+          <div className="w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+          <h2 className="text-2xl font-bold text-slate-800">Processing...</h2>
         </div>
-        <p className="text-lg text-neutral-medium transition-opacity duration-500">
+        <p className="text-lg text-slate-500 transition-opacity duration-500">
           {loadingMessages[messageIndex]}
         </p>
-        <p className="text-sm text-neutral-medium/80 mt-2">
+        <p className="text-sm text-slate-500/80 mt-2">
           Please wait a moment while the AI works its magic.
         </p>
       </div>
